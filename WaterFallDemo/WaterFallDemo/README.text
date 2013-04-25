@@ -1,0 +1,13 @@
+1、用到jsonkit,需要导入库；
+用到SDWebImage导入框架：MapKit.framework,ImageIO.framework
+用到SVPullToRefresh导入框架：QuartzCore.framework
+2、该项目引用arc机制
+3、导入WaterFall文件夹
+用法：
+//创建瀑布流视图
+self.waterView = [[ImageWaterView alloc]initWithDataArray:arrayImage withFrame:CGRectMake(0, 0, 320, 460)];
+[self.view addSubview:waterView];
+//刷新瀑布流
+-(void)refreshView:(NSArray*)array;
+//加载下一页瀑布流
+-(void)loadNextPage:(NSArray*)array;
